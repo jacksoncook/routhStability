@@ -60,11 +60,15 @@ for i = 1:(len.*height)
         row = row + 1;
     end
 end
+% Cover weird edge case where an uneccesary line was added to the bottom
+if prevLine(table(end - 2, 2:end)) + prevLine(table(end - 1, 1:end)) == len.*2 - 2
+    table = table(1:(end - 1), 1:end)
+end
 column = 1;
 % Assume starts at positive
 positive = true;
 unstableRoots = 0;
-for row = 1:degree
+for row = 1:(degree - 1)
     if table(row, column) < 0 && positive
         unstableRoots = unstableRoots + 1;
         positive = false;

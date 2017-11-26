@@ -62,7 +62,7 @@ for i = 1:(len.*height)
 end
 % Cover weird edge case where an uneccesary line was added to the bottom
 if prevLine(table(end - 2, 2:end)) + prevLine(table(end - 1, 1:end)) == len.*2 - 2
-    table = table(1:(end - 1), 1:end)
+    table = table(1:(end - 1), 1:end);
 end
 column = 1;
 % Assume starts at positive

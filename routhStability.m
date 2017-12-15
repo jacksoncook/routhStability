@@ -83,5 +83,5 @@ if rowOfZeros && unstableRoots == 0
 elseif unstableRoots == 0
     unstableRoots = 'Stable';
 else
-    unstableRoots = ['Unstable with ', num2str(unstableRoots), ' Unstable Roots'];
+    unstableRoots = ['Unstable with ', num2str(unstableRoots), ' Unstable Root(s)'];
 end
